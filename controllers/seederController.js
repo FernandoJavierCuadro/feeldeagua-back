@@ -1,5 +1,5 @@
 const db = require("../db");
-const { mongoose, Artist, Album } = require("../models");
+const { mongoose, Artist, Album, User } = require("../models");
 
 module.exports = {
   seeder: async (req, res) => {
@@ -15,6 +15,12 @@ module.exports = {
       });
       await artist.save();
     }
+
+    const user = new User({
+      name: "admin",
+      password: "admin",
+    });
+    await user.save();
 
     res.json("new database created");
   },
