@@ -2,13 +2,21 @@ const { Artist, User } = require("../models");
 
 module.exports = {
   getArtists: async (req, res) => {
-    const artists = await Artist.find();
+    const artists = await Artist.find({ draft: false });
     res.json(artists);
   },
 
   getArtist: async (req, res) => {
-    const artist = await Artist.findById(req.params["_id"]).populate("albums");
+    const artist = await Artist.findById(req.params["_id"]).populate({
+      path: "albums",
+      match: { draft: false },
+    });
     res.json(artist);
+  },
+
+  getAdminArtists: async (req, res) => {
+    const artists = await Artist.find();
+    res.json(artists);
   },
 
   addArtist: async (req, res) => {

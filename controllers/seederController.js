@@ -13,6 +13,7 @@ module.exports = {
         description: db.artists[i].description,
         image: db.artists[i].image,
         albums: db.artists[i].albums,
+        draft: false,
       });
       await artist.save();
     }

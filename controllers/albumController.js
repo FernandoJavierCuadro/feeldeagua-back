@@ -1,9 +1,18 @@
 const { Album, Artist, User } = require("../models");
 
 module.exports = {
-  getAlbum: async (req, res) => {
-    const album = await Album.findById(req.album).populate("albums");
+  getAlbumDownload: async (req, res) => {
+    const album = await Album.findById(req.params["_id"]);
     res.json(album);
+  },
+
+  getAlbum: async (req, res) => {
+    if (user !== null) {
+      const album = await Album.findById(req.params["_id"]);
+      res.json(album);
+    } else {
+      res.json("unauthorized");
+    }
   },
 
   addAlbum: async (req, res) => {
