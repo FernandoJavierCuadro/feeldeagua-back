@@ -8,11 +8,7 @@ const {
 } = require("../controllers/albumController");
 
 function albumRoutes(app) {
-  app.get(
-    "api/v1/album/download/:_id",
-    jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
-    getAlbumDownload
-  );
+  app.get("api/v1/album/download/:_id", getAlbumDownload);
 
   app.get(
     "api/v1/album/:_id",
