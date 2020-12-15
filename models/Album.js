@@ -8,6 +8,7 @@ module.exports = (mongoose, Schema) => {
     trackList: [{ type: String, required: false }],
     downloadLink: { type: String, required: false },
     releaseYear: { type: Number, required: false },
+    draft: { type: Boolean, required: false },
   });
 
   const Album = mongoose.model("Album", albumSchema);

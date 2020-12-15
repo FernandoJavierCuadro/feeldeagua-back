@@ -6,6 +6,7 @@ module.exports = (mongoose, Schema) => {
     description: { type: String, required: false },
     image: { type: String, required: false },
     albums: [{ type: Schema.Types.ObjectId, ref: "Album" }],
+    draft: { type: Boolean, required: false },
   });
 
   const Artist = mongoose.model("Artist", artistSchema);
