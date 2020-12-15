@@ -15,8 +15,8 @@ function albumRoutes(app) {
     addAlbum
   );
 
-  app.post(
-    "/api/v1/albums/update",
+  app.put(
+    "/api/v1/albums",
     jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
     updateAlbum
   );

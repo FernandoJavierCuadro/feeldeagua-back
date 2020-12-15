@@ -1,5 +1,6 @@
 const db = require("../db");
 const { mongoose, Artist, Album, User } = require("../models");
+const createToken = require("../utils/token");
 
 module.exports = {
   seeder: async (req, res) => {
@@ -20,6 +21,7 @@ module.exports = {
       name: "admin",
       password: "admin",
     });
+    user.tokens = [createToken(user.id)];
     await user.save();
 
     res.json("new database created");

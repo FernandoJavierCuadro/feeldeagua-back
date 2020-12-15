@@ -1,4 +1,4 @@
-const { Album } = require("../models");
+const { Album, Artist, User } = require("../models");
 
 module.exports = {
   getAlbum: async (req, res) => {
@@ -8,12 +8,18 @@ module.exports = {
 
   addAlbum: async (req, res) => {
     const user = await User.findById(req.user);
-    if (user === true) {
+    if (user !== null) {
       const album = await new Album({
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
       });
+
+      const artist = await Artist.findById(req.body.artist);
+      artist.albums.push(album);
+      await artist.save();
+      await album.save();
+
       res.json(album);
     } else {
       res.json("unauthorized");
@@ -22,11 +28,11 @@ module.exports = {
 
   updateAlbum: async (req, res) => {
     const user = await User.findById(req.user);
-    if (user === true) {
+    if (user !== null) {
       const album = await Album.findByIdAndUpdate(req.body._id, req.body, {
         new: true,
       });
-      res.json("user updated");
+      res.json("album updated");
     } else {
       res.json("unauthorized");
     }
@@ -34,7 +40,7 @@ module.exports = {
 
   deleteAlbum: async (req, res) => {
     const user = await User.findById(req.user);
-    if (user === true) {
+    if (user !== null) {
       const album = await Album.findByIdAndDelete(req.body._id);
       return res.json("album deleted");
     } else {

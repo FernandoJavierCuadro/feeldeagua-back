@@ -1,22 +1,23 @@
-const jwt = require("jsonwebtoken");
 const { User } = require("../models");
-
-const createToken = (user) => {
-  return jwt.sign(user, process.env.JWT_SECRET);
-};
+const createToken = require("../utils/token");
 
 module.exports = {
-  register: async (req, res) => {
-    const user = await new User({
-      name: req.body.name,
-      password: req.body.password,
-    });
-    user.tokens = [createToken(user.id)];
-    await user.save();
-    res.json({
-      name: user.name,
-      token: user.tokens[0],
-    });
+  addUser: async (req, res) => {
+    const admin = await User.findById(req.user);
+    if (admin === true) {
+      const user = await new User({
+        name: req.body.name,
+        password: req.body.password,
+      });
+      user.tokens = [createToken(user.id)];
+      await user.save();
+      res.json({
+        name: user.name,
+        token: user.tokens[0],
+      });
+    } else {
+      res.json("unauthorized");
+    }
   },
 
   logIn: async (req, res) => {
@@ -44,14 +45,24 @@ module.exports = {
   },
 
   updateUser: async (req, res) => {
-    const user = await User.findByIdAndUpdate(req.body._id, req.body, {
-      new: true,
-    });
-    res.json("user updated");
+    const admin = await User.findById(req.user);
+    if (admin !== null) {
+      const user = await User.findByIdAndUpdate(req.body._id, req.body, {
+        new: true,
+      });
+      res.json("user updated");
+    } else {
+      res.json("unauthorized");
+    }
   },
 
   deleteUser: async (req, res) => {
-    const users = await User.findByIdAndDelete(req.body._id);
-    res.json("user deleted");
+    const admin = await User.findById(req.user);
+    if (admin !== null) {
+      const users = await User.findByIdAndDelete(req.body._id);
+      res.json("user deleted");
+    } else {
+      res.json("unauthorized");
+    }
   },
 };

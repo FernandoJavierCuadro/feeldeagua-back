@@ -2,13 +2,13 @@ const { Schema } = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 module.exports = (mongoose, Schema) => {
-  const UserSchema = new Schema({
+  const userSchema = new Schema({
     name: { type: String, required: true },
     password: { type: String, required: true },
     tokens: [],
   });
 
-  UserSchema.pre("save", function (next) {
+  userSchema.pre("save", function (next) {
     if (!this.isModified("password")) {
       return next();
     }
@@ -16,7 +16,7 @@ module.exports = (mongoose, Schema) => {
     next();
   });
 
-  const User = mongoose.model("User", UserSchema);
+  const User = mongoose.model("User", userSchema);
 
   User.prototype.validPassword = async function (password) {
     return await bcrypt.compare(password, this.password);

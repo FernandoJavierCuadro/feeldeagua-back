@@ -10,7 +10,7 @@ const {
 function artistRoutes(app) {
   app.get("/api/v1/artists", getArtists);
 
-  app.get("api/v1/artist", getArtist);
+  app.get("/api/v1/artist/:_id", getArtist);
 
   app.post(
     "/api/v1/artists",
@@ -18,8 +18,8 @@ function artistRoutes(app) {
     addArtist
   );
 
-  app.post(
-    "/api/v1/artists/update",
+  app.put(
+    "/api/v1/artists",
     jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
     updateArtist
   );
