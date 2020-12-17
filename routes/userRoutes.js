@@ -9,7 +9,7 @@ const {
 } = require("../controllers/userController");
 
 function userRoutes(app) {
-  app.post("/api/v1/users/login", validate, logIn);
+  app.post("/api/v1/admin/users/login", validate, logIn);
 
   app.post(
     "/api/v1/users",
