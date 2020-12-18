@@ -9,6 +9,7 @@ module.exports = {
   getArtistsByName: async (req, res) => {
     const artists = await Artist.find({
       name: { $regex: req.query.name, $options: "i" },
+      draft: false,
     }).limit(10);
     res.json(artists);
   },
@@ -22,8 +23,25 @@ module.exports = {
   },
 
   getAdminArtists: async (req, res) => {
-    const artists = await Artist.find();
-    res.json(artists);
+    const user = await User.findById(req.user);
+    if (user !== null) {
+      const artists = await Artist.find();
+      res.json(artists);
+    } else {
+      res.json("unauthorized");
+    }
+  },
+
+  getAdminArtistsByName: async (req, res) => {
+    const user = await User.findById(req.user);
+    if (user !== null) {
+      const artists = await Artist.find({
+        name: { $regex: req.query.name, $options: "i" },
+      }).limit(10);
+      res.json(artists);
+    } else {
+      res.json("unauthorized");
+    }
   },
 
   addArtist: async (req, res) => {

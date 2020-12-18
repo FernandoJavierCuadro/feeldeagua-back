@@ -1,9 +1,10 @@
 const jwt = require("express-jwt");
 const {
   getArtists,
+  getArtistsByName,
   getArtist,
   getAdminArtists,
-  getArtistsByName,
+  getAdminArtistsByName,
   addArtist,
   updateArtist,
   deleteArtist,
@@ -11,6 +12,8 @@ const {
 
 function artistRoutes(app) {
   app.get("/api/v1/artists", getArtists);
+
+  app.get("/api/v1/artists/search", getArtistsByName);
 
   app.get("/api/v1/artist/:_id", getArtist);
 
@@ -20,7 +23,11 @@ function artistRoutes(app) {
     getAdminArtists
   );
 
-  app.get("/api/v1/admin/artists/search", getArtistsByName);
+  app.get(
+    "/api/v1/admin/artists/search",
+    jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
+    getAdminArtistsByName
+  );
 
   app.post(
     "/api/v1/admin/artists",
