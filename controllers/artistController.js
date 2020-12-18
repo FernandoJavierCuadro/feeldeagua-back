@@ -1,3 +1,6 @@
+const formidable = require("formidable");
+const fs = require("fs");
+const path = require("path");
 const { Artist, User } = require("../models");
 
 module.exports = {
@@ -47,13 +50,27 @@ module.exports = {
   addArtist: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
-      const artist = await new Artist({
-        name: req.body.name,
-        description: req.body.description,
-        image: req.body.image,
+      const form = formidable();
+
+      form.parse(req, async (err, fields, files) => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+
+        let artist = await new Artist(fields);
+        if (files.image) {
+          artist.image = `/images/${files.image.name}`;
+        }
+        let fileDir = path.resolve("public") + `/images/${files.image.name}`;
+        let img = fs.readFileSync(files.image.path);
+        fs.writeFile(fileDir, img, (err) => {
+          if (err) throw err;
+          console.log("The file has been saved!");
+        });
+        await artist.save();
+        res.json(artist);
       });
-      await artist.save();
-      res.json(artist);
     } else {
       res.json("unauthorized");
     }
