@@ -3,6 +3,7 @@ const {
   getArtists,
   getArtist,
   getAdminArtists,
+  getArtistsByName,
   addArtist,
   updateArtist,
   deleteArtist,
@@ -18,6 +19,8 @@ function artistRoutes(app) {
     jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
     getAdminArtists
   );
+
+  app.get("/api/v1/admin/artists/search", getArtistsByName);
 
   app.post(
     "/api/v1/admin/artists",

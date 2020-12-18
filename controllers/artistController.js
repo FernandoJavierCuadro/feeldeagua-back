@@ -6,6 +6,13 @@ module.exports = {
     res.json(artists);
   },
 
+  getArtistsByName: async (req, res) => {
+    const artists = await Artist.find({
+      name: { $regex: req.query.name, $options: "i" },
+    }).limit(10);
+    res.json(artists);
+  },
+
   getArtist: async (req, res) => {
     const artist = await Artist.findById(req.params["_id"]).populate({
       path: "albums",
