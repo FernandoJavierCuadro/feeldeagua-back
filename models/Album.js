@@ -5,9 +5,9 @@ module.exports = (mongoose, Schema) => {
     name: { type: String, required: true },
     description: { type: String, required: true },
     image: { type: String, required: true },
-    trackList: [{ type: String, required: false }],
     downloadLink: { type: String, required: false },
     releaseYear: { type: Number, required: false },
+    artist: { type: String, required: true },
     draft: { type: Boolean, required: false },
   });
 

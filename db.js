@@ -4,21 +4,21 @@ module.exports = {
       name: "Cielos de Plomo",
       description:
         "Cielos de Plomo es un proyecto musical en mutación, nacido en Maldonado, Uruguay y actualmente basado en Montevideo.",
-      image: "/images/cielos.jpg",
+      image: "/images/albums/cielos.jpg",
       albums: [],
     },
     {
       name: "Mux",
       description:
         "Mux es un sexteto que une la música instrumental y las canciones de una forma particular. Se formó en montevideo en 2008",
-      image: "/images/mux.jpg",
+      image: "/images/albums/mux.jpg",
       albums: [],
     },
     {
       name: "Bolsa de naylon en la rama de un arbol",
       description:
         "A medio camino entre la tradición y eso otro que algunos llaman innovación (pero nosotros no) la música de Bolsa está llena de dudas, decisiones tomadas a partir de errores, cosas pautadas e improvisación. Música instrumental con alguna intervención vocal en donde el candombe convive con el drum n bass, la plena con el free jazz, las raices con el glitch, el humor con el amor.",
-      image: "/images/bolsa.jpg",
+      image: "/images/albums/bolsa.jpg",
       albums: [],
     },
     {
