@@ -28,7 +28,7 @@ module.exports = {
   getAdminArtists: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
-      const artists = await Artist.find();
+      const artists = await Artist.find().populate({ path: "albums" });
       res.json(artists);
     } else {
       res.json("unauthorized");
@@ -40,7 +40,7 @@ module.exports = {
     if (user !== null) {
       const artists = await Artist.find({
         name: { $regex: req.query.name, $options: "i" },
-      }).limit(10);
+      }).populate({ path: "albums" });
       res.json(artists);
     } else {
       res.json("unauthorized");

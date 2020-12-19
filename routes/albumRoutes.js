@@ -2,6 +2,7 @@ const jwt = require("express-jwt");
 const {
   getAlbumDownload,
   getAdminAlbums,
+  getAdminAlbumsByName,
   addAlbum,
   updateAlbum,
   deleteAlbum,
@@ -14,6 +15,12 @@ function albumRoutes(app) {
     "/api/v1/admin/albums",
     jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
     getAdminAlbums
+  );
+
+  app.get(
+    "/api/v1/admin/albums/search",
+    jwt({ secret: process.env.JWT_SECRET, algorithms: ["HS256"] }),
+    getAdminAlbumsByName
   );
 
   app.post(

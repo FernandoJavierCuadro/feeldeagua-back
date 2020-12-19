@@ -19,6 +19,18 @@ module.exports = {
     }
   },
 
+  getAdminAlbumsByName: async (req, res) => {
+    const user = await User.findById(req.user);
+    if (user !== null) {
+      const albums = await Album.find({
+        name: { $regex: req.query.name, $options: "i" },
+      });
+      res.json(albums);
+    } else {
+      res.json("unauthorized");
+    }
+  },
+
   addAlbum: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
