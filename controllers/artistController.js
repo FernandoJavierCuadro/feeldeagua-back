@@ -80,8 +80,29 @@ module.exports = {
   updateArtist: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
-      const artist = await Artist.findByIdAndUpdate(req.body._id, req.body, {
-        new: true,
+      const form = formidable();
+
+      form.parse(req, async (err, fields, files) => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log(fields);
+        let artist = await Artist.findByIdAndUpdate(fields.id, fields, {
+          new: true,
+        });
+        if (files.image) {
+          artist.image = `/images/artists/${files.image.name}`;
+        }
+        let fileDir =
+          path.resolve("public") + `/images/artists/${files.image.name}`;
+        let img = fs.readFileSync(files.image.path);
+        fs.writeFile(fileDir, img, (err) => {
+          if (err) throw err;
+          console.log("The file has been saved!");
+        });
+        await artist.save();
+        res.json(artist);
       });
       res.json("artist updated");
     } else {
