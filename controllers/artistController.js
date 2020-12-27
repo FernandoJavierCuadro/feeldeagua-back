@@ -87,22 +87,21 @@ module.exports = {
           console.log(err);
           return;
         }
-        console.log(fields);
+        fields.image === "undefined" && delete fields.image;
         let artist = await Artist.findByIdAndUpdate(fields.id, fields, {
           new: true,
         });
         if (files.image) {
           artist.image = `/images/artists/${files.image.name}`;
+          let fileDir =
+            path.resolve("public") + `/images/artists/${files.image.name}`;
+          let img = fs.readFileSync(files.image.path);
+          fs.writeFile(fileDir, img, (err) => {
+            if (err) throw err;
+            console.log("The file has been saved!");
+          });
         }
-        let fileDir =
-          path.resolve("public") + `/images/artists/${files.image.name}`;
-        let img = fs.readFileSync(files.image.path);
-        fs.writeFile(fileDir, img, (err) => {
-          if (err) throw err;
-          console.log("The file has been saved!");
-        });
         await artist.save();
-        res.json(artist);
       });
       res.json("artist updated");
     } else {
