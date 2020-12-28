@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-mongoose.connect(
-  `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`,
-  { useUnifiedTopology: true }
-);
+mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
+mongoose.set("useCreateIndex", true);
+mongoose.set("useUnifiedTopology", true);
+mongoose.connect(
+  `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`
+);
+
 const ArtistModel = require("./Artist");
 const AlbumModel = require("./Album");
 const UserModel = require("./User");
