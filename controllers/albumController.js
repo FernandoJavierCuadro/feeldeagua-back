@@ -78,8 +78,42 @@ module.exports = {
   updateAlbum: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
-      const album = await Album.findByIdAndUpdate(req.body._id, req.body, {
-        new: true,
+      const form = formidable();
+
+      form.parse(req, async (err, fields, files) => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        let album = await Album.findByIdAndUpdate(fields.id, fields, {
+          new: true,
+        });
+        if (files.image) {
+          album.image = `/images/albums/${files.image.name}`;
+          let fileDir =
+            path.resolve("public") + `/images/albums/${files.image.name}`;
+          let img = fs.readFileSync(files.image.path);
+          fs.writeFile(fileDir, img, (err) => {
+            if (err) throw err;
+            console.log("The file has been saved!");
+          });
+        }
+
+        if (files.file) {
+          album.downloadLink = `/albums/${files.file.name}`;
+          let fileDir = path.resolve("private") + `/albums/${files.file.name}`;
+          let file = fs.readFileSync(files.file.path);
+          fs.writeFile(fileDir, file, (err) => {
+            if (err) throw err;
+            console.log("The file has been saved!");
+          });
+        }
+        console.log(fields);
+        const artist = await Artist.findOne({ name: fields.artist });
+        artist.albums.push(album);
+        album.artist = artist.name;
+        await artist.save();
+        await album.save();
       });
       res.json("album updated");
     } else {

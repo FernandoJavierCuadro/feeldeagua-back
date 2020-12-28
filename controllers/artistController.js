@@ -87,7 +87,6 @@ module.exports = {
           console.log(err);
           return;
         }
-        fields.image === "undefined" && delete fields.image;
         let artist = await Artist.findByIdAndUpdate(fields.id, fields, {
           new: true,
         });
