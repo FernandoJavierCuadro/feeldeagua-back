@@ -108,8 +108,7 @@ module.exports = {
             console.log("The file has been saved!");
           });
         }
-        console.log(fields);
-        const artist = await Artist.findOne({ name: fields.artist });
+        const artist = await Artist.findById(fields.artist);
         artist.albums.push(album);
         album.artist = artist.name;
         await artist.save();
