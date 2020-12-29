@@ -7,7 +7,7 @@ module.exports = (mongoose, Schema) => {
     image: { type: String, required: false },
     downloadLink: { type: String, required: false },
     releaseYear: { type: Number, required: true },
-    artist: { type: Schema.Types.ObjectId, ref: "Artist" },
+    artist: { type: String, required: true },
     draft: { type: Boolean, required: true },
   });
 

@@ -41,6 +41,7 @@ module.exports = {
           console.log(err);
           return;
         }
+        console.log(fields);
         let album = await new Album(fields);
         if (files.image) {
           album.image = `/images/albums/${files.image.name}`;
@@ -62,13 +63,13 @@ module.exports = {
           if (err) throw err;
           console.log("The file has been saved!");
         });
-        const artist = await Artist.findById(fields.artist);
+        const artist = await Artist.findOneAndUpdate(fields.artist);
         artist.albums.push(album);
         album.artist = artist.name;
         await artist.save();
         await album.save();
 
-        res.json(album);
+        res.json("album created");
       });
     } else {
       res.json("unauthorized");
@@ -108,7 +109,7 @@ module.exports = {
             console.log("The file has been saved!");
           });
         }
-        const artist = await Artist.findById(fields.artist);
+        const artist = await Artist.findOneAndUpdate(fields.artist);
         artist.albums.push(album);
         album.artist = artist.name;
         await artist.save();
