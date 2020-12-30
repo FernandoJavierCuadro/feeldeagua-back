@@ -41,7 +41,6 @@ module.exports = {
           console.log(err);
           return;
         }
-        console.log(fields);
         let album = await new Album(fields);
         if (files.image) {
           album.image = `/images/albums/${files.image.name}`;
@@ -86,9 +85,11 @@ module.exports = {
           console.log(err);
           return;
         }
-        let album = await Album.findByIdAndUpdate(fields.id, fields, {
+        console.log(fields);
+        let album = await Album.findByIdAndUpdate(fields._id, fields, {
           new: true,
         });
+
         if (files.image) {
           album.image = `/images/albums/${files.image.name}`;
           let fileDir =
@@ -99,7 +100,6 @@ module.exports = {
             console.log("The file has been saved!");
           });
         }
-
         if (files.file) {
           album.downloadLink = `/albums/${files.file.name}`;
           let fileDir = path.resolve("private") + `/albums/${files.file.name}`;
@@ -111,8 +111,8 @@ module.exports = {
         }
         const artist = await Artist.findOneAndUpdate(fields.artist);
         artist.albums.push(album);
-        album.artist = artist.name;
         await artist.save();
+        console.log(album);
         await album.save();
       });
       res.json("album updated");
