@@ -4,6 +4,11 @@ const path = require("path");
 const { Album, Artist, User } = require("../models");
 
 module.exports = {
+  getAlbums: async (req, res) => {
+    const albums = await Album.find({ draft: false }).sort({ createdAt: -1 });
+    res.json(albums);
+  },
+
   getAlbumDownload: async (req, res) => {
     const album = await Album.findById(req.params["_id"]);
     res.json(album);

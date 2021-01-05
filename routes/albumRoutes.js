@@ -1,5 +1,6 @@
 const jwt = require("express-jwt");
 const {
+  getAlbums,
   getAlbumDownload,
   getAdminAlbums,
   getAdminAlbumsByName,
@@ -9,6 +10,8 @@ const {
 } = require("../controllers/albumController");
 
 function albumRoutes(app) {
+  app.get("/api/v1/albums", getAlbums);
+
   app.get("/api/v1/album/download/:_id", getAlbumDownload);
 
   app.get(
