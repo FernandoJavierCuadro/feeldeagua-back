@@ -5,7 +5,9 @@ const { Album, Artist, User } = require("../models");
 
 module.exports = {
   getAlbums: async (req, res) => {
-    const albums = await Album.find({ draft: false }).sort({ createdAt: -1 });
+    const albums = await Album.find({ draft: false })
+      .sort({ createdAt: -1 })
+      .limit(5);
     res.json(albums);
   },
 
@@ -46,6 +48,7 @@ module.exports = {
           console.log(err);
           return;
         }
+        console.log(fields);
         let album = await new Album(fields);
         if (files.image) {
           album.image = `/images/albums/${files.image.name}`;
@@ -67,9 +70,11 @@ module.exports = {
           if (err) throw err;
           console.log("The file has been saved!");
         });
-        const artist = await Artist.findOneAndUpdate(fields.artist);
+        const artist = await Artist.findOne({ name: fields.artist });
+        console.log(artist);
         artist.albums.push(album);
         album.artist = artist.name;
+        console.log(album);
         await artist.save();
         await album.save();
 
@@ -114,10 +119,9 @@ module.exports = {
             console.log("The file has been saved!");
           });
         }
-        const artist = await Artist.findOneAndUpdate(fields.artist);
+        const artist = await Artist.findOne({ name: fields.artist });
         artist.albums.push(album);
         await artist.save();
-        console.log(album);
         await album.save();
       });
       res.json("album updated");

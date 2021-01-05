@@ -32,7 +32,7 @@ module.exports = {
   getAdminArtists: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
-      const artists = await Artist.find().populate({
+      const artists = await Artist.find().sort({ name: "asc" }).populate({
         path: "albums",
         select: "name",
       });

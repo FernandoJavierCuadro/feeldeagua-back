@@ -136,6 +136,12 @@ module.exports = {
       albums: [],
     },
     {
+      name: "Jorge Portillo",
+      description: "",
+      image: "Portillo",
+      albums: [],
+    },
+    {
       name: "O'neill",
       description: "",
       image: "O'neill",
