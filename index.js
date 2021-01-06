@@ -10,8 +10,9 @@ const seederRoutes = require("./routes/seederRoutes");
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "private")));
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors({ exposedHeaders: "Content-disposition" }));
 
 artistRoutes(app);
 albumRoutes(app);
