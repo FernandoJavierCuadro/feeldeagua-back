@@ -13,8 +13,7 @@ module.exports = {
 
   getAlbumDownload: async (req, res) => {
     const album = await Album.findById(req.params._id);
-    console.log(album);
-    res.download(album.downloadLink);
+    res.download(album.downloadLink, `${album.name}.zip`);
   },
 
   getAdminAlbums: async (req, res) => {
