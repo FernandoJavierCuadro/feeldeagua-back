@@ -12,8 +12,9 @@ module.exports = {
   },
 
   getAlbumDownload: async (req, res) => {
-    const album = await Album.findById(req.params["_id"]);
-    res.json(album);
+    const album = await Album.findById(req.params._id);
+    console.log(album);
+    res.download(album.downloadLink);
   },
 
   getAdminAlbums: async (req, res) => {
@@ -48,7 +49,6 @@ module.exports = {
           console.log(err);
           return;
         }
-        console.log(fields);
         let album = await new Album(fields);
         if (files.image) {
           album.image = `/images/albums/${files.image.name}`;
@@ -62,19 +62,18 @@ module.exports = {
         });
 
         if (files.file) {
-          album.downloadLink = `/albums/${files.file.name}`;
+          album.downloadLink =
+            path.resolve("public") + `/albums/${files.file.name}`;
         }
-        let fileDir = path.resolve("private") + `/albums/${files.file.name}`;
+        let fileDir = path.resolve("public") + `/albums/${files.file.name}`;
         let file = fs.readFileSync(files.file.path);
         fs.writeFile(fileDir, file, (err) => {
           if (err) throw err;
           console.log("The file has been saved!");
         });
         const artist = await Artist.findOne({ name: fields.artist });
-        console.log(artist);
         artist.albums.push(album);
         album.artist = artist.name;
-        console.log(album);
         await artist.save();
         await album.save();
 
