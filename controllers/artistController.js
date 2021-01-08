@@ -5,18 +5,21 @@ const { Artist, User } = require("../models");
 
 module.exports = {
   getArtists: async (req, res) => {
-    const artists = await Artist.find({ draft: false }, "-albums");
+    const artists = await Artist.find({ draft: false }, "-albums").sort({
+      name: "asc",
+    });
     res.json(artists);
   },
 
   getArtistsByName: async (req, res) => {
-    const artists = await Artist.find(
-      {
-        name: { $regex: req.query.name, $options: "i" },
-        draft: false,
-      },
-      "name"
-    ).limit(10);
+    const artists = await Artist.find({
+      name: { $regex: req.query.name, $options: "i" },
+      draft: false,
+    })
+      .sort({
+        name: "asc",
+      })
+      .limit(10);
     res.json(artists);
   },
 
@@ -47,7 +50,9 @@ module.exports = {
     if (user !== null) {
       const artists = await Artist.find({
         name: { $regex: req.query.name, $options: "i" },
-      }).populate({ path: "albums", select: "name" });
+      })
+        .sort({ name: "asc" })
+        .populate({ path: "albums", select: "name" });
       res.json(artists);
     } else {
       res.json("unauthorized");

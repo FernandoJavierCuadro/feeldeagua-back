@@ -19,7 +19,7 @@ module.exports = {
   getAdminAlbums: async (req, res) => {
     const user = await User.findById(req.user);
     if (user !== null) {
-      const albums = await Album.find();
+      const albums = await Album.find().sort({ createdAt: -1 });
       res.json(albums);
     } else {
       res.json("unauthorized");
@@ -31,7 +31,7 @@ module.exports = {
     if (user !== null) {
       const albums = await Album.find({
         name: { $regex: req.query.name, $options: "i" },
-      });
+      }).sort({ createdAt: -1 });
       res.json(albums);
     } else {
       res.json("unauthorized");
@@ -117,9 +117,6 @@ module.exports = {
             console.log("The file has been saved!");
           });
         }
-        const artist = await Artist.findOne({ name: fields.artist });
-        artist.albums.push(album);
-        await artist.save();
         await album.save();
       });
       res.json("album updated");
