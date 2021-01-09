@@ -13,7 +13,7 @@ module.exports = {
 
   getAlbumDownload: async (req, res) => {
     const album = await Album.findById(req.params._id);
-    res.download(album.downloadLink);
+    const file = res.download(album.downloadLink);
   },
 
   getAdminAlbums: async (req, res) => {
@@ -93,7 +93,6 @@ module.exports = {
           console.log(err);
           return;
         }
-        console.log(fields);
         let album = await Album.findByIdAndUpdate(fields._id, fields, {
           new: true,
         });
@@ -109,7 +108,8 @@ module.exports = {
           });
         }
         if (files.file) {
-          album.downloadLink = `/albums/${files.file.name}`;
+          album.downloadLink =
+            path.resolve("private") + `/albums/${files.file.name}`;
           let fileDir = path.resolve("private") + `/albums/${files.file.name}`;
           let file = fs.readFileSync(files.file.path);
           fs.writeFile(fileDir, file, (err) => {

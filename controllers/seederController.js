@@ -1,5 +1,6 @@
 const db = require("../db");
 const { mongoose, Artist, Album, User } = require("../models");
+const path = require("path");
 const createToken = require("../utils/token");
 
 module.exports = {
@@ -23,7 +24,7 @@ module.exports = {
         name: db.albums[i].name,
         description: db.albums[i].description,
         image: db.albums[i].image,
-        downloadLink: db.albums[i].downloadLink,
+        downloadLink: path.resolve("private") + db.albums[i].downloadLink,
         releaseYear: db.albums[i].releaseYear,
         artist: db.albums[i].artist,
         draft: false,
