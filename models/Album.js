@@ -5,11 +5,11 @@ module.exports = (mongoose, Schema) => {
     {
       name: { type: String, required: true },
       description: { type: String, required: true },
-      image: { type: String, required: false },
-      downloadLink: { type: String, required: false },
+      image: { type: String, required: true },
+      downloadLink: { type: String, required: true },
       releaseYear: { type: Number, required: true },
       artist: { type: String, required: true },
-      draft: { type: Boolean, required: true },
+      draft: { type: Boolean, required: false },
     },
     { timestamps: true }
   );

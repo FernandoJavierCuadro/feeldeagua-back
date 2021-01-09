@@ -18,6 +18,22 @@ module.exports = {
       await artist.save();
     }
 
+    for (let i = 0; i < db.albums.length; i++) {
+      const album = new Album({
+        name: db.albums[i].name,
+        description: db.albums[i].description,
+        image: db.albums[i].image,
+        downloadLink: db.albums[i].downloadLink,
+        releaseYear: db.albums[i].releaseYear,
+        artist: db.albums[i].artist,
+        draft: false,
+      });
+      const artist = await Artist.findOne({ name: db.albums[i].artist });
+      artist.albums.push(album);
+      await artist.save();
+      await album.save();
+    }
+
     const user = new User({
       name: "admin",
       password: "admin",
