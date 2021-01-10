@@ -60,21 +60,21 @@ module.exports = {
       name: "Alessandro Podestá",
       description:
         "Lleva 7 discos editados: Aspavento (2009), medias tintas (2010), lo que no sé (2012), Partido el ganado (2014), Más Quereres (2017), de la piedra de allá (2019) y Viento diablito (2019), participa en dos antologías de La Lupa Libros (2010 y 2011) y discos de colegas como Valentina Pecora, Javier Alves y Zelma Vargas. ",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/podesta.jpg",
       albums: [],
     },
     {
       name: "Florida",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/florida.jpg",
       albums: [],
     },
     {
       name: "Genuflexos",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/genuflexos.jpg",
       albums: [],
     },
     {
@@ -102,7 +102,7 @@ module.exports = {
       name: "Lucas Meyer",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/meyer.jpg",
       albums: [],
     },
     {
@@ -120,10 +120,10 @@ module.exports = {
       albums: [],
     },
     {
-      name: "Chino",
+      name: "ChINO",
       description:
         "ChINO es un dúo de música experimental integrado por Juan Sacco en bajo, loops y vocales, y Martín Recto en batería y chapas. ChINO se basa en la repetición maquinal como materia prima de expresión.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/chino.jpg",
       albums: [],
     },
     {
@@ -186,7 +186,7 @@ module.exports = {
       name: "Carmen Sandiego",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/carmen.jpg",
       albums: [],
     },
     {
@@ -214,7 +214,7 @@ module.exports = {
       name: "Diego Cotelo",
       description:
         'Inquieto y de corazón ecléctico, a Diego Cotelo le resulta raro escribir de si mismo en tercera persona. Tiene varios discos "solistas" con distintos seudónimos, entidades, cada uno hecho de maneras distintas con distintas personas. Componiendo y grabando al mismo tiempo, musicalizando la palabra hablada, arreglando músicas populares de maneras atrevida, de todo un poco.',
-      image: "/images/artists/generic.png",
+      image: "/images/artists/cotelo.jpg",
       albums: [],
     },
     {
@@ -235,7 +235,7 @@ module.exports = {
       name: "Monkelis",
       description:
         "Monkelis está compuesto por Santiago Guidotti, Eugenio Amen y Carolina Zunino. Dos guitarras y dos tambores. Rock primitivo, divertido y elegante. Letras en inglés, español, portugués e italiano. Gritos honestos, instrumentos baratos, corazones caros.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/monkelis.jpg",
       albums: [],
     },
     {
@@ -256,7 +256,7 @@ module.exports = {
       name: "Autotono",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/autotono.jpg",
       albums: [],
     },
   ],
@@ -496,10 +496,10 @@ module.exports = {
       name: "Trance Folclorico",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/albums/23 - Chino - (2014) Trance Folclorico.jpg",
-      downloadLink: "/albums/23 - Chino - (2014) Trance Folclorico.rar",
+      image: "/images/albums/23 - ChINO - (2014) Trance Folclorico.jpg",
+      downloadLink: "/albums/23 - ChINO - (2014) Trance Folclorico.rar",
       releaseYear: 2014,
-      artist: "Chino",
+      artist: "ChINO",
       draft: false,
     },
     {
