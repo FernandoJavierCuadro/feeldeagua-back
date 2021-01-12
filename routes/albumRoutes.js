@@ -3,6 +3,7 @@ const {
   getAlbums,
   getAlbumDownload,
   getAdminAlbums,
+  getLatestAlbums,
   getAdminAlbumsByName,
   addAlbum,
   updateAlbum,
@@ -11,6 +12,8 @@ const {
 
 function albumRoutes(app) {
   app.get("/api/v1/albums", getAlbums);
+
+  app.get("/api/v1/albums/latest", getLatestAlbums);
 
   app.get("/api/v1/album/download/:_id", getAlbumDownload);
 

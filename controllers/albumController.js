@@ -5,6 +5,11 @@ const { Album, Artist, User } = require("../models");
 
 module.exports = {
   getAlbums: async (req, res) => {
+    const albums = await Album.find({ draft: false }).sort({ createdAt: -1 });
+    res.json(albums);
+  },
+
+  getLatestAlbums: async (req, res) => {
     const albums = await Album.find({ draft: false })
       .sort({ createdAt: -1 })
       .limit(5);
