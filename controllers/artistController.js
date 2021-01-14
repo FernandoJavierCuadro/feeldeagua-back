@@ -72,10 +72,10 @@ module.exports = {
 
         let artist = await new Artist(fields);
         if (files.image) {
-          artist.image = `/images/artists/${files.image.name}`;
+          artist.image = `/images/artists/${fields.imageName}`;
         }
         let fileDir =
-          path.resolve("public") + `/images/artists/${files.image.name}`;
+          path.resolve("public") + `/images/artists/${fields.imageName}`;
         let img = fs.readFileSync(files.image.path);
         fs.writeFile(fileDir, img, (err) => {
           if (err) throw err;
@@ -103,9 +103,9 @@ module.exports = {
           new: true,
         });
         if (files.image) {
-          artist.image = `/images/artists/${files.image.name}`;
+          artist.image = `/images/artists/${fields.imageName}`;
           let fileDir =
-            path.resolve("public") + `/images/artists/${files.image.name}`;
+            path.resolve("public") + `/images/artists/${fields.imageName}`;
           let img = fs.readFileSync(files.image.path);
           fs.writeFile(fileDir, img, (err) => {
             if (err) throw err;
