@@ -25,35 +25,35 @@ module.exports = {
       name: "Solar",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "El Dúo Melódico",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Hey Ladies",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Martin Barea Mattos y X hora X dia X mes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Uoh!",
       description:
         "Uoh! es una banda mayormente instrumental de Montevideo. Hay mucha improvisación; de guitarras tranquilas, a partes pesadas pasando por partes bailables y bardo.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -81,21 +81,21 @@ module.exports = {
       name: "Abdul",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Tangente",
       description:
         "Tangente son: Mauricio Ramos; batería y percusión Juan Martín López; guitarra y voz, Nacho Correa; Bajo y contrabajo",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Pancho",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -109,14 +109,14 @@ module.exports = {
       name: "Pacientes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Santo Dubois",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -130,56 +130,56 @@ module.exports = {
       name: "Strudl Von Disphonic Orchestra",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Ataque Chino",
       description:
         "Busca integrar música y poesía en una misma experiencia estética, estableciendo relaciones y concordancias entre los textos y algunas de las posibles sonoridades que estos sugieren.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Señor Faraón",
       description:
         "Señor Faraón es el experimento en solitario de Ismael Varela (Montevideo, Uruguay, 1986). Edita Siguiendo Al Rayo (2009), Las Últimas en Inglés (2010) y Piel de Culebra (2015). Compone la música de las películas Nunchaku (2011) y Clever (2015). Se presenta en Uruguay, Argentina, Chile y Estados Unidos en el festival SXSW 2014. Siempre convencido de que la Música manda.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Portillo",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Jorge Portillo",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "O'neill",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Ismael Varela",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Fabrizio Rossi",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -193,21 +193,21 @@ module.exports = {
       name: "Francisco Trujillo",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Patricia Turnes",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Rocoto",
       description:
         "Desde sus inicios en 2015 Rocoto es una banda en transición constante, tanto en su integración como en su sonido. El disco “Tanto y no” fue la culminación de la primera etapa de la banda y en él participaron: Juan Manuel Varela y Alessandro Podestá -quienes continúan- y Gerardo Martínez y Javier Alves. El año 2017 tiene la inclusión de Guzmán Rivero y Gonzalo Riso.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -221,14 +221,14 @@ module.exports = {
       name: "Mena",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Isla de Flores",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -242,14 +242,14 @@ module.exports = {
       name: "Feel de Agua",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
       name: "Excelentes Nadadores",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/artists/generic.png",
+      image: "/images/artists/generic.jpg",
       albums: [],
     },
     {
@@ -339,7 +339,7 @@ module.exports = {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       image:
-        "/images/albums/08 - Mux - (2011) La Supersticiosa Comparacion Entre lo que Fuimos Antes y lo que Creemos que Vamos a Ser Hoy.png",
+        "/images/albums/08 - Mux - (2011) La Supersticiosa Comparacion Entre lo que Fuimos Antes y lo que Creemos que Vamos a Ser Hoy.jpg",
       downloadLink:
         "/albums/08 - Mux - (2011) La Supersticiosa Comparacion Entre lo que Fuimos Antes y lo que Creemos que Vamos a Ser Hoy.rar",
       releaseYear: 2011,
@@ -519,7 +519,7 @@ module.exports = {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       image:
-        "/images/albums/25 - Strudl Von Disphonic Orchestra - (2014) Strudl.png",
+        "/images/albums/25 - Strudl Von Disphonic Orchestra - (2014) Strudl.jpg",
       downloadLink:
         "/albums/25 - Strudl Von Disphonic Orchestra - (2014) Strudl.rar",
       releaseYear: 2014,
@@ -570,7 +570,7 @@ module.exports = {
       name: "Piel de Culebra",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/albums/30 - Sr Faraon - (2015) Piel de Culebra.png",
+      image: "/images/albums/30 - Sr Faraon - (2015) Piel de Culebra.jpg",
       downloadLink: "/albums/30 - Sr Faraon - (2015) Piel de Culebra.rar",
       releaseYear: 2015,
       artist: "Señor Faraón",
@@ -613,7 +613,7 @@ module.exports = {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       image:
-        "/images/albums/34 - Ismael Varela - (2016) Clever (banda sonora).png",
+        "/images/albums/34 - Ismael Varela - (2016) Clever (banda sonora).jpg",
       downloadLink:
         "/albums/34 - Ismael Varela - (2016) Clever (banda sonora).rar",
       releaseYear: 2016,
@@ -668,7 +668,7 @@ module.exports = {
       name: "4",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/albums/39 - Duo Melodico - (2017) 4.png",
+      image: "/images/albums/39 - Duo Melodico - (2017) 4.jpg",
       downloadLink: "/albums/39 - Duo Melodico - (2017) 4.rar",
       releaseYear: 2017,
       artist: "El Dúo Melódico",
@@ -744,7 +744,7 @@ module.exports = {
       name: "Noctambul",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      image: "/images/albums/46 - Sr Faraon - (2018) Noctambul.png",
+      image: "/images/albums/46 - Sr Faraon - (2018) Noctambul.jpg",
       downloadLink: "/albums/46 - Sr Faraon - (2018) Noctambul.rar",
       releaseYear: 2018,
       artist: "Señor Faraón",
