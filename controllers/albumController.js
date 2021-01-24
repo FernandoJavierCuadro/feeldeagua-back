@@ -67,9 +67,9 @@ module.exports = {
 
         if (files.file) {
           album.downloadLink =
-            path.resolve("private") + `/albums/${fields.imageName}`;
+            path.resolve("public") + `/albums/${fields.imageName}`;
         }
-        let fileDir = path.resolve("private") + `/albums/${fields.imageName}`;
+        let fileDir = path.resolve("public") + `/albums/${fields.imageName}`;
         let file = fs.readFileSync(files.file.path);
         fs.writeFile(fileDir, file, (err) => {
           if (err) throw err;
@@ -114,8 +114,8 @@ module.exports = {
         }
         if (files.file) {
           album.downloadLink =
-            path.resolve("private") + `/albums/${files.file.name}`;
-          let fileDir = path.resolve("private") + `/albums/${files.file.name}`;
+            path.resolve("public") + `/albums/${files.file.name}`;
+          let fileDir = path.resolve("public") + `/albums/${files.file.name}`;
           let file = fs.readFileSync(files.file.path);
           fs.writeFile(fileDir, file, (err) => {
             if (err) throw err;

@@ -24,7 +24,7 @@ module.exports = {
         name: db.albums[i].name,
         description: db.albums[i].description,
         image: db.albums[i].image,
-        downloadLink: path.resolve("private") + db.albums[i].downloadLink,
+        downloadLink: path.resolve("public") + db.albums[i].downloadLink,
         releaseYear: db.albums[i].releaseYear,
         artist: db.albums[i].artist,
         draft: false,
